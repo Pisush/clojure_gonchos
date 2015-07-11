@@ -26,10 +26,10 @@
                            0 period
                            0 q/TWO-PI)
         center-x (/ (q/width) 2)
-        center-h (/ (q/height) 2)]
+        center-y (/ (q/height) 2)]
     ; we want to rotate sketch relative to the center of screen
     ; so we need to move the origin point first and only then rotate
-    (q/with-translation [center-x center-y]
+    (q/with-translation [550 350]
       ; rotate screen given angle
       (q/with-rotation [angle]
         ; move origin back to the left top corner (default position)
@@ -51,7 +51,7 @@
       :draw (partial rotating-draw period draw))))
 
 (q/defsketch practice
-  :title  "hey"
+  :title  "Bon Voyage"
   :size [1000 710]
   :setup setup
   :draw draw
